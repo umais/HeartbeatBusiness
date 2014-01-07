@@ -199,6 +199,17 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Jasmine2\lib\jasmine-2.0.0\boot.js" />
+    <Content Include="Scripts\Jasmine2\lib\jasmine-2.0.0\console.js" />
+    <Content Include="Scripts\Jasmine2\lib\jasmine-2.0.0\jasmine-html.js" />
+    <Content Include="Scripts\Jasmine2\lib\jasmine-2.0.0\jasmine.css" />
+    <Content Include="Scripts\Jasmine2\lib\jasmine-2.0.0\jasmine.js" />
+    <Content Include="Scripts\Jasmine2\lib\jasmine-2.0.0\jasmine_favicon.png" />
+    <Content Include="Scripts\Jasmine2\SpecRunner.html" />
+    <Content Include="Scripts\Jasmine2\spec\PlayerSpec.js" />
+    <Content Include="Scripts\Jasmine2\spec\SpecHelper.js" />
+    <Content Include="Scripts\Jasmine2\src\Player.js" />
+    <Content Include="Scripts\Jasmine2\src\Song.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />

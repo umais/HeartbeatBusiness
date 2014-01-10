@@ -16,5 +16,11 @@ namespace HeartbeatBusiness.Controllers
             return View();
         }
 
+        public ActionResult OfflineEvents()
+        {
+            return View();
+        }
+
+        
     }
 }

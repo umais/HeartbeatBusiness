@@ -18,6 +18,7 @@ namespace HeartbeatBusiness
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+            routes.MapRoute("cache.manifest", "cache.manifest", new { controller = "Resources", action = "Manifest" });
         }
     }
 }

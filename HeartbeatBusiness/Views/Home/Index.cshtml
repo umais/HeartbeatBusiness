@@ -1,50 +1,9 @@
 ﻿@{
-    Layout = null;
+    ViewBag.Title = "Index";
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <link rel="stylesheet" href="~/Content/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/Content/bootstrap/bootstrap-united-theme.min.css" />
-    <link rel="stylesheet" href="~/Content/bootstrap/styles.css" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body ng-app="HeartbeatApp" >
-  
-    <div ng-controller="HeartbeatController">
-        
-        <header id="top" class="container">
-<div id='controls' class='navbar navbar-inverse'>
-
-    <div id="logo" class="navbar-header">
-        <div class="navbar-brand ">
-        {{Author}}
-        </div>
-
-        <button class=" btn btn-success navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-     
-            <span class="glyphicon glyphicon-chevron-down " ></span>
-
-        </button>
-
-     </div>
-    <div class="navbar-collapse collapse">
-    
-        <ul class="nav navbar-nav navbar-right">
-
-            <li ng-repeat="item in menuItems" class="{{item.cls}} ">
-                <a href="home">{{item.name}}</a> 
-            </li>
-
-           
-        </ul>
-    </div>
-</div>
-    </header>
-    <section class="container">
+ <section class="container">
         <div class="col-md-6">
         <ul class="list-group list-group-default">
 
@@ -55,13 +14,3 @@
 
         <div id="results"></div>
     </section>
-        </div>
-</body>
-    <script src="~/Scripts/jquery-1.8.2.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
-        <script src="~/Content/Angular/angular.min.js"></script>
-    <script src="~/Content/Angular/app.js"></script>
-    <script src="~/Content/Angular/HeartbeatService.js"></script>
-    <script src="~/Content/Angular/HeartbeatController.js"></script>
-    <script src="~/Scripts/script.js"></script>
-</html>

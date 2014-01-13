@@ -15,7 +15,7 @@ var things = function () {
     
 }
 
-console.log(things());
+//console.log(things());
 
 
 var ninja = {

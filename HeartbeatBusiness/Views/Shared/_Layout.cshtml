@@ -5,6 +5,9 @@
     <link rel="stylesheet" href="~/Content/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="~/Content/bootstrap/bootstrap-united-theme.min.css" />
     <link rel="stylesheet" href="~/Content/bootstrap/styles.css" />
+    <link rel="stylesheet" href="~/Content/Angular/ng-grid.min.css" />
+    <link rel="stylesheet" href="~/Scripts/styles.css" />
+       <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" /> 
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
 </head>
@@ -32,7 +35,7 @@
         <ul class="nav navbar-nav navbar-right">
 
             <li ng-repeat="item in menuItems" class="{{item.cls}} ">
-                <a href="home">{{item.name}}</a> 
+                <a href={{item.url}}>{{item.name}}</a> 
             </li>
 
            
@@ -44,11 +47,16 @@
         </div>
 </body>
     <script src="~/Scripts/jquery-1.8.2.min.js"></script>
+      <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
     <script src="~/Scripts/bootstrap.min.js"></script>
         <script src="~/Content/Angular/angular.min.js"></script>
+    <script src="~/Content/Angular/ng-grid-2.0.6.min.js"></script>
     <script src="~/Content/Angular/app.js"></script>
     <script src="~/Content/Angular/HeartbeatService.js"></script>
     <script src="~/Content/Angular/HeartbeatController.js"></script>
+    
+    
+    
     <script src="~/Scripts/script.js"></script>
 </html>
 

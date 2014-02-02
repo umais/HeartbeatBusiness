@@ -1,3 +1,3 @@
 ﻿'use strict';
 
-var HeartbeatApp = angular.module("HeartbeatApp", []);
+var HeartbeatApp = angular.module("HeartbeatApp", ['ngGrid']);

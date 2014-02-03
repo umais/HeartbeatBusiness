@@ -5,6 +5,16 @@ $(document).ready(function () {
     $('#startDate').datepicker();
     $('#endDate').datepicker();
 
+    var $pickbutton = $('#pickbutton');
+    $('#menuDropDown li a').on('click', function () {
+
+        var reason = $(this).text();
+        $pickbutton.text(reason);
+
+
+
+    });
+
 });
 
 

@@ -3,12 +3,13 @@
 <html manifest="">
 <head>
     <link rel="stylesheet" href="~/Content/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/Content/bootstrap/bootstrap-united-theme.min.css" />
+<link href="~/Content/bootstrap/amelia-bootstrap-theme.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/Content/bootstrap/styles.css" />
     <link rel="stylesheet" href="~/Content/Angular/ng-grid.min.css" />
     <link rel="stylesheet" href="~/Scripts/styles.css" />
        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" /> 
     <meta name="viewport" content="width=device-width" />
+    
     <title>@ViewBag.Title</title>
 </head>
 <body ng-app="HeartbeatApp" >
@@ -16,11 +17,11 @@
     <div ng-controller="HeartbeatController">
         
         <header id="top" class="container">
-<div id='controls' class='navbar navbar-inverse'>
+<div id='controls' class='navbar navbar-default navbar-fixed-top'>
 
     <div id="logo" class="navbar-header">
         <div class="navbar-brand ">
-        {{Author}}
+        Heartbeat Business Solutions
         </div>
 
         <button class=" btn btn-success navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -32,15 +33,31 @@
      </div>
     <div class="navbar-collapse collapse">
     
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav ">
 
             <li ng-repeat="item in menuItems" class="{{item.cls}} ">
                 <a href={{item.url}}>{{item.name}}</a> 
             </li>
 
+
            
         </ul>
+
+       
     </div>
+   <!--  <div class="dropdown">
+            <button class="btn btn-success" id="pickbutton">Pick One</button>
+            <button class="btn btn-success" data-toggle="dropdown"><span class="caret"></span></button>
+            <ul class="dropdown-menu" id="menuDropDown">
+
+            <li ng-repeat="item in menuItems"  tabindex="-1">
+                <a >{{item.name}}</a> 
+            </li>
+
+
+           
+        </ul>
+        </div>-->
 </div>
     </header>
    @RenderBody()

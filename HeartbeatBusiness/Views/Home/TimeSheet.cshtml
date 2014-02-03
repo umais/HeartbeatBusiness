@@ -3,20 +3,34 @@
 }
 
 <div class="container">
-    <div class="row">
-       <div class="col-md-12"> <h2>TimeSheet</h2></div>
+    <div class="page-header">
+      <h2>TimeSheet</h2>
 
     </div>
-    <div class="row">
-       <div class="col-md-4"> <label>Start Date:</label><input id="startDate" type="text" value="" ng-model="startDate" /> </div>
-         <div class="col-md-4"> <label>End Date:</label><input id="endDate" type="text" value="" ng-model="endDate" /> </div>
-       <div class="col-md-4"> <input type="button"  value="Show Report" ng-click="getReport();"/></div>
+    <div class="row mars">
+        <div class="col-md-2">
+        <form>
+       <div class="form-group"> <label>Start Date:</label><input id="startDate" type="text" value="" ng-model="startDate" class="form-control" /> </div>
+         <div class="form-group"> <label>End Date:</label><input id="endDate" type="text" value="" ng-model="endDate" class="form-control"/> </div>
+       <div class="form-group"> <input type="button"  class="btn btn-success" value="Show Report" class="form-control" ng-click="getReport();"/></div>
+    </form>
+            </div>
+
+          <div class="col-md-10 hidden-xs">
+            <div class="well">
+        <div class="gridStyle" id="timesheetTable" ng-grid="GridOptions"></div>
+                </div>
     </div>
-    <div class="row">
+            </div>
+    <div class="row ">
+    
+      
+    </div>
+        <div class="row visible-xs">
     
         <div class="col-md-12 ">
             <div class="well">
-        <div class="gridStyle" id="timesheetTable" ng-grid="GridOptions"></div>
+                   <div>showing it off</div>
                 </div>
     </div>
     </div>

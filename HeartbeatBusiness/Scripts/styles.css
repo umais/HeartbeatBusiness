@@ -1,5 +1,18 @@
-﻿.gridStyle {
+﻿
+body {
+    margin-top:90px;
+ 
+}
+
+.gridStyle {
     border: 1px solid rgb(212,212,212);
     min-width: 90%;
     min-height: 650px;
+    color:black;
+    
+   
+}
+
+.mars {
+    margin-bottom:20px;
 }

@@ -13,12 +13,16 @@ namespace HeartbeatBusiness.Controllers
 
         public ActionResult Index()
         {
+
+            string url = System.Web.HttpContext.Current.Request.Url.AbsoluteUri;
+            ViewBag.URI = url;
             return View();
         }
 
 
         public ActionResult TimeSheet()
         {
+            string url = System.Web.HttpContext.Current.Request.Url.AbsoluteUri;
             return View();
         }
         public ActionResult OfflineEvents()

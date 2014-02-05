@@ -132,6 +132,8 @@
     <Compile Include="Controllers\InvoiceController.cs" />
     <Compile Include="Controllers\ManifestResult.cs" />
     <Compile Include="Controllers\ResourcesController.cs" />
+    <Compile Include="Controllers\TasksController.cs" />
+    <Compile Include="Controllers\WorkersController.cs" />
     <Compile Include="DataAccess\Extensions.cs" />
     <Compile Include="DataAccess\InvoiceSQLRepository.cs" />
     <Compile Include="Filters\ParamFilter.cs" />

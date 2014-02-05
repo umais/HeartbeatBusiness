@@ -18,13 +18,9 @@ namespace HeartbeatBusiness.Controllers
         }
 
         [HttpPost]
-        public List<Invoice> InvoiceListing([FromBody] List<HeartbeatParams> lst)
+        public int InvoiceListing([FromBody] List<HeartbeatParams> lst)
         {
-            List<Invoice> invoiceList=new List<Invoice>();
-            if (lst.Count == 2)
-              invoiceList=  repo.GetInvoice(lst[0].ParamValue, lst[1].ParamValue);
-
-            return invoiceList;
+           return repo.InsertInvoice(lst);
         }
 
 

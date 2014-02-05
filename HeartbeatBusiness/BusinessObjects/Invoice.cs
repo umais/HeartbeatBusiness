@@ -31,7 +31,7 @@ namespace HeartbeatBusiness.BusinessObjects
             if (dbReader.HasColumn("LastName") && dbReader["LastName"] != DBNull.Value) LastName = dbReader["LastName"].ToString();
             if (dbReader.HasColumn("ProjectName") && dbReader["ProjectName"] != DBNull.Value) ProjectName = dbReader["ProjectName"].ToString();
             if (dbReader.HasColumn("TaskName") && dbReader["TaskName"] != DBNull.Value) TaskName = dbReader["TaskName"].ToString();
-            if (dbReader.HasColumn("WorkDate") && dbReader["WorkDate"] != DBNull.Value) WorkDate = dbReader["WorkDate"].ToString();
+            if (dbReader.HasColumn("WorkDate") && dbReader["WorkDate"] != DBNull.Value) WorkDate = Convert.ToDateTime(dbReader["WorkDate"]).ToShortDateString();
             if (dbReader.HasColumn("HoursWorked") && dbReader["HoursWorked"] != DBNull.Value) HoursWorked = Convert.ToInt32(dbReader["HoursWorked"].ToString());
             if (dbReader.HasColumn("WorkDescription") && dbReader["WorkDescription"] != DBNull.Value) Description = dbReader["WorkDescription"].ToString();
             if (dbReader.HasColumn("ChargeRate") && dbReader["ChargeRate"] != DBNull.Value) ChargeRate = dbReader["ChargeRate"].ToString();

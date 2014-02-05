@@ -20,7 +20,7 @@
                      { field: 'WorkDate', displayName: 'Date Worked', enableCellEdit: true, width: 150 },
                      { field: 'ChargeRate', displayName: 'Rate', enableCellEdit: true, width: 100 },
                      { field: 'TotalAmount', displayName: 'Total Amount', enableCellEdit: true, width: 150 },
-                     { field: 'Description', displayName: 'Description', enableCellEdit: true, width: 400, cellTemplate: "<div class='AddButton' ng-click='CallUpdateService(row.rowIndex);' ><span class='glyphicon glyphicon-th' data-toggle='tooltip' title='{{row.entity[col.field]}}'></span></div>" }
+                     { field: 'Description', displayName: 'Description', enableCellEdit: true, width: 400, cellTemplate: "<div class='AddButton' ng-click='CallUpdateService(row.rowIndex);' ><span class='glyphicon glyphicon-th' data-toggle='tooltip'  data-html='true' title='{{row.entity[col.field]}}'></span></div>" }
 
         ]
 

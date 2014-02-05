@@ -16,3 +16,10 @@ body {
 .mars {
     margin-bottom:20px;
 }
+
+.details {
+
+border:1px solid red;
+background-color:black;
+color:white;
+}

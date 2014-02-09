@@ -4,7 +4,7 @@ $(document).ready(function () {
    // $('#startDate').change(function () { $('#UKPrice').focus(); });
     $('#startDate').datepicker();
     $('#endDate').datepicker();
-
+    $('#WorkDate').datepicker();
     var $pickbutton = $('#pickbutton');
     $('#menuDropDown li a').on('click', function () {
 

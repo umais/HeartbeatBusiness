@@ -5,11 +5,19 @@
 <div class="container">
     <div class="page-header">
       <h2>TimeSheet</h2>
-        <input type="button"  class="btn btn-success" value="Add Time" class="form-control" />
+        
     </div>
     <div class="row mars">
         <div class="col-md-2">
         <form>
+            <div class="form-group">
+                      <label>Worker:</label>
+                     <select class="form-control" >
+                       <option ng-repeat="w in workers" value="{{w.ParamValue}}" >{{w.ParamName}}</option>
+                     
+                     </select> 
+
+                 </div>
        <div class="form-group"> <label>Start Date:</label><input id="startDate" type="text" value="" ng-model="startDate" class="form-control" /> </div>
          <div class="form-group"> <label>End Date:</label><input id="endDate" type="text" value="" ng-model="endDate" class="form-control"/> </div>
        <div class="form-group"> <input type="button"  class="btn btn-success" value="Show Report" class="form-control" ng-click="getReport();"/></div>
@@ -29,9 +37,25 @@
         <div class="row visible-xs">
     
         <div class="col-md-12 ">
-            <div class="well">
-                   <div>showing it off</div>
+            <div  id="accordian" class="panel-group">
+                   <div ng-repeat="t in timesheet" class="panel panel-info">
+                       <div class="panel-heading">
+                           <div class="panel-title" ><a href="#{{t.InvoiceID}}" data-toggle="collapse" data-parent="#accordian">{{t.WorkDate}}</a></div>
+                       </div>
+                       <div class="panel-collapse collapse" id="{{t.InvoiceID}}">
+                           <div class="panel-body">
+                               <div class="well">
+                                   <span>Name:{{t.FirstName}} {{t.LastName}}</span><br />
+                                   <span>Hours Worked:{{t.HoursWorked}} </span><br />
+                                   <span>Task Name:{{t.TaskName}}</span><br />
+                                   <span>Description:{{t.Description}}</span>
+                               </div>
+                            </div>
+
+                       </div>
+                   </div>
                 </div>
+
     </div>
     </div>
     </div>

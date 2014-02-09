@@ -1,10 +1,12 @@
 ﻿HeartbeatApp.controller("HeartbeatController", function AppController($scope, HeartbeatService, $timeout) {
     $scope.Author = HeartbeatService.serviceAuthor.Name;
     $scope.menuItems = [{ name: 'Home', cls: 'nav active', url: 'home/index' }, { name: 'Timesheet', cls: 'nav', url: 'Home/timesheet' }, { name: 'Register', cls: 'nav', url: 'Home/register' }];
-    $scope.Resources = { Invoice: 'Invoice' };
+    $scope.Resources = { Invoice: 'Invoice' ,Workers:'Workers',Tasks:'Tasks'};
     $scope.startDate = '1/1/2014';
     $scope.endDate = '1/31/2014';
     $scope.timesheet = [];
+    $scope.workers = [{ ParamName: 'Umais', ParamValue: "1" }]
+    $scope.tasks = [];
     //Grid Options
     $scope.GridOptions = {
         data: 'timesheet',
@@ -33,23 +35,50 @@
 
     $scope.params = [];
     $scope.init = function () {
-        
-        $('#startDate').datepicker();
-        $('#endDate').datepicker();
+        $scope.getDropDownData();
+      
     };
     $scope.getReport = function () {
+        $scope.params = [];
         $scope.startDate = $('#startDate').val();
         $scope.endDate = $('#endDate').val();
         $scope.params.push({ ParamName: 'StartDate', ParamValue: $scope.startDate }, { ParamName: 'EndDate', ParamValue: $scope.endDate });
         HeartbeatService.GetDataByParams($scope.success,$scope.error,$scope.Resources.Invoice,$scope.params)
         $scope.params = [];
     };
+
+    $scope.getWorkers = function () {
+       
+        
+        HeartbeatService.GetData($scope.WorkerGetSuccess, $scope.error, $scope.Resources.Workers)
+       
+    };
+    $scope.getTasks = function () {
+
+
+        HeartbeatService.GetData($scope.TasksGetSuccess, $scope.error, $scope.Resources.Tasks)
+
+    };
+    $scope.WorkerGetSuccess = function (response) {
+        $scope.workers = response;
+        $scope.$apply();
+    };
+
+    $scope.TasksGetSuccess = function (response) {
+        $scope.tasks = response;
+        $scope.$apply();
+    }
     $scope.success = function (response) {
         $scope.timesheet = response;
         $scope.$apply();
     };
     $scope.error = function (result) {
         alert("FAILED : " + result.status + ' ' + result.statusText);
+    }
+
+    $scope.getDropDownData=function(){
+        $scope.getWorkers();
+        $scope.getTasks();
     }
     //End of Scope Function
 }

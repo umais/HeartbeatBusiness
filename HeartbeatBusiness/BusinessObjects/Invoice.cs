@@ -10,6 +10,7 @@ namespace HeartbeatBusiness.BusinessObjects
 {
     public class Invoice
     {
+        public string InvoiceID { get; set; }
         public string CompanyName { get; set; }
         public string BillTo { get; set; }
         public string FirstName { get; set; }
@@ -36,7 +37,7 @@ namespace HeartbeatBusiness.BusinessObjects
             if (dbReader.HasColumn("WorkDescription") && dbReader["WorkDescription"] != DBNull.Value) Description = dbReader["WorkDescription"].ToString();
             if (dbReader.HasColumn("ChargeRate") && dbReader["ChargeRate"] != DBNull.Value) ChargeRate = dbReader["ChargeRate"].ToString();
             if (dbReader.HasColumn("Total") && dbReader["Total"] != DBNull.Value) TotalAmount = dbReader["Total"].ToString();
-        
+            if (dbReader.HasColumn("TimeID") && dbReader["TimeID"] != DBNull.Value) InvoiceID = dbReader["TimeID"].ToString();
         
         
         }

@@ -1,0 +1,12 @@
+﻿body
+{
+    margin-top:120px;
+}
+
+.pass {
+    color:green;
+}
+
+.fail {
+    color:red;
+}

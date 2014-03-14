@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{41C1225E-77CA-41FF-B30B-133E707975D5}</ProjectGuid>
+    <ProjectGuid>{1FC016D2-36BC-4FE0-B919-C6C1425CF897}</ProjectGuid>
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HeartbeatBusiness</RootNamespace>
-    <AssemblyName>HeartbeatBusiness</AssemblyName>
+    <RootNamespace>HeartbeatWebsite</RootNamespace>
+    <AssemblyName>HeartbeatWebsite</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -126,20 +126,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="BusinessObjects\Company.cs" />
-    <Compile Include="BusinessObjects\EncryptDecrypt.cs" />
-    <Compile Include="BusinessObjects\HeartbeatParams.cs" />
-    <Compile Include="BusinessObjects\Invoice.cs" />
-    <Compile Include="BusinessObjects\Users.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\InvoiceController.cs" />
-    <Compile Include="Controllers\ManifestResult.cs" />
-    <Compile Include="Controllers\ResourcesController.cs" />
-    <Compile Include="Controllers\TasksController.cs" />
-    <Compile Include="Controllers\WorkersController.cs" />
-    <Compile Include="DataAccess\Extensions.cs" />
-    <Compile Include="DataAccess\InvoiceSQLRepository.cs" />
-    <Compile Include="Filters\ParamFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -158,16 +145,19 @@
     <Content Include="Content\Angular\angular.min.js" />
     <Content Include="Content\Angular\app.js" />
     <Content Include="Content\Angular\HeartbeatController.js" />
+    <Content Include="Content\Angular\HeartbeatService.js" />
     <Content Include="Content\Angular\ng-grid-2.0.6.min.js" />
     <Content Include="Content\Angular\ng-grid.min.css" />
-    <Content Include="Content\Angular\HeartbeatService.js" />
-    <Content Include="Content\bootstrap\amelia-bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap\bootstrap-flatly-theme.min.css" />
     <Content Include="Content\bootstrap\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap\bootstrap-united-theme.min.css" />
     <Content Include="Content\bootstrap\bootstrap.min.css" />
-    <Content Include="Content\bootstrap\styles.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Content\shahid.jpg" />
+    <Content Include="Content\bootstrap\styles.css" />
+    <Content Include="Content\scripts\bootstrap.min.js" />
+    <Content Include="Content\scripts\jquery-1.8.2.min.js" />
+    <Content Include="Content\scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Content\scripts\modernizr-2.6.2.js" />
+    <Content Include="Content\scripts\script.js" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -229,17 +219,6 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\Jasmine2\lib\jasmine-2.0.0\boot.js" />
-    <Content Include="Scripts\Jasmine2\lib\jasmine-2.0.0\console.js" />
-    <Content Include="Scripts\Jasmine2\lib\jasmine-2.0.0\jasmine-html.js" />
-    <Content Include="Scripts\Jasmine2\lib\jasmine-2.0.0\jasmine.css" />
-    <Content Include="Scripts\Jasmine2\lib\jasmine-2.0.0\jasmine.js" />
-    <Content Include="Scripts\Jasmine2\lib\jasmine-2.0.0\jasmine_favicon.png" />
-    <Content Include="Scripts\Jasmine2\SpecRunner.html" />
-    <Content Include="Scripts\Jasmine2\spec\PlayerSpec.js" />
-    <Content Include="Scripts\Jasmine2\spec\SpecHelper.js" />
-    <Content Include="Scripts\Jasmine2\src\Player.js" />
-    <Content Include="Scripts\Jasmine2\src\Song.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -254,8 +233,6 @@
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\script.js" />
-    <Content Include="Scripts\styles.css" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -268,10 +245,8 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\OfflineEvents.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\TimeSheet.cshtml" />
-    <Content Include="Views\Home\InvoiceView.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -284,7 +259,6 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
-  <PropertyGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
@@ -297,9 +271,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>64318</DevelopmentServerPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:56799/</IISUrl>
+          <IISUrl>http://localhost:54482/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

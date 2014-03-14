@@ -30,6 +30,10 @@ namespace HeartbeatBusiness.Controllers
             return View();
         }
 
+        public ActionResult InvoiceView()
+        {
+            return View();
+        }
 
 
         
